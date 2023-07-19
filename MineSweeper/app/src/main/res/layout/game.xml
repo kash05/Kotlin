@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/tvMinesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mines"
+        app:layout_constraintEnd_toStartOf="@+id/btnRestart"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ibMineFlag"
+        app:layout_constraintTop_toTopOf="@+id/btnRestart" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="restart"
+        app:layout_constraintEnd_toStartOf="@+id/ibMineFlag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvMinesLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvMinesLabel" />
+
+    <TextView
+        android:id="@+id/tvMines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMinesLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvMinesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinesLabel"
+        tools:text="13" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTimeLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTimeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeLabel"
+        tools:text="10" />
+
+    <ImageButton
+        android:id="@+id/ibMineFlag"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMines"
+        app:layout_constraintEnd_toStartOf="@+id/tvTimeLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRestart"
+        app:layout_constraintTop_toTopOf="@+id/tvMinesLabel"
+        app:srcCompat="@drawable/flag" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="665dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMines">
+
+        <LinearLayout
+            android:id="@+id/llBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

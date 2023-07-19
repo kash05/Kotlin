@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MiniCalculator</string>
+    <string name="invalid">Invalid Output</string>
+</resources>
